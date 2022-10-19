@@ -233,7 +233,7 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="jenisLayanan" id="informasiId" value="Permohanan Informmasi" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="informasiId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Permohanan Informmasi</span>
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Permohonan Informasi</span>
                         </label>
                       </div>
                     </div>
@@ -444,6 +444,7 @@
     let baseUrl = "<?php echo base_url(); ?>";
     let tipe = "<?php echo $tipe; ?>";
     let voices = speechSynthesis.getVoices();
+    let number = null;
 
     function playTextToSpeech(x) {
       if (speech && speech !== x.innerHTML.toString() && speechSynthesis.speaking) {
@@ -469,7 +470,8 @@
       recognition.maxAlternatives = 2;
       recognition.lang = "id-ID";
 
-      function speechToText(number) {
+      function speechToText(numberx) {
+        number = numberx;
         if ($(`#btnRecord${number}`).hasClass('btn-success')) {
           recognition.start();
         } else {
@@ -478,6 +480,7 @@
 
         recognition.addEventListener("start", (e) => {
           setTimeout(() => {
+            console.log(`#btnRecord${number}`)
             $(`#btnRecord${number}`).removeClass("btn-success");
             $(`#btnRecord${number}`).addClass("btn-danger");
             $(`#textRecord${number}`).text("Perintah Suara: 'stop', 'hapus' ");

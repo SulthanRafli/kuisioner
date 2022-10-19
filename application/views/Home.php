@@ -47,7 +47,9 @@
 Perlu  disampaikan bahwa tidak ada jawaban benar atau salah dalam menjawab kuesioner ini, serta tidak akan mempengaruhi pelayanan PTUN Makassar terhadap Bpk/Ibu/Sdr. Demikian atas partisipasi dan perhatiannya disampaikan terima kasih.	</a></p> -->
     </div>
     <div class="">
-      <center><a href="<?php echo base_url("Input/$tipe"); ?>" class="btn btn-info btn-lg">Mulai Isi Kuisioner</a></center>
+      <center><a href="<?php echo base_url("Input/ipak"); ?>" class="btn btn-info btn-lg">Mulai Isi Kuisioner IPAK</a></center>
+      <br>
+      <center><a href="<?php echo base_url("Input/ikm"); ?>" class="btn btn-info btn-lg">Mulai Isi Kuisioner IKM</a></center>
     </div>
 
   </div>
