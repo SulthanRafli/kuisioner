@@ -443,6 +443,7 @@
     let speech = null;
     let baseUrl = "<?php echo base_url(); ?>";
     let tipe = "<?php echo $tipe; ?>";
+    let voices = speechSynthesis.getVoices();
 
     function playTextToSpeech(x) {
       if (speech && speech !== x.innerHTML.toString() && speechSynthesis.speaking) {
@@ -453,7 +454,6 @@
       speechText = speech;
       if (!speechSynthesis.speaking) {
         let speechVoice = new SpeechSynthesisUtterance();
-        let voices = speechSynthesis.getVoices();
         speechVoice.voice = voices[182];
         speechVoice.text = speechText;
         speechVoice.lang = "id-ID";
@@ -510,16 +510,15 @@
 
       };
 
-      // $(document).ready(function() {
-      //   if (!speechSynthesis.speaking) {
-      //     let speechVoice = new SpeechSynthesisUtterance();
-      //     let voices = speechSynthesis.getVoices();
-      //     speechVoice.voice = voices[182];
-      //     speechVoice.text = "selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar";
-      //     speechVoice.lang = "id-ID";
-      //     speechSynthesis.speak(speechVoice);
-      //   }
-      // });
+      $(document).ready(function() {
+        if (!speechSynthesis.speaking) {
+          let speechVoice = new SpeechSynthesisUtterance();
+          speechVoice.voice = voices[182];
+          speechVoice.text = "selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar";
+          speechVoice.lang = "id-ID";
+          speechSynthesis.speak(speechVoice);
+        }
+      });
     } else {
       alert("Your Browser does not support Speech Recognition, Please Use Google Chrome");
     }
