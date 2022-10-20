@@ -156,13 +156,13 @@ class hasil_model extends CI_ModeL
 
     public function fetch_total($id)
     {
-        $query = $this->db->query("SELECT COUNT(id) AS total FROM t_detail_kuisioner WHERE id = '$id'");
+        $query = $this->db->query("SELECT COUNT(id) AS total FROM t_detail_kuisioner WHERE id_pertanyaan = '$id'");
         return $query->row();
     }
 
     public function fetch_total_isi($id, $isi)
     {
-        $query = $this->db->query("SELECT COUNT(id) AS total FROM t_detail_kuisioner WHERE id = '$id' AND isi = '$isi'");
+        $query = $this->db->query("SELECT COUNT(id) AS total FROM t_detail_kuisioner WHERE id_pertanyaan = '$id' AND isi = '$isi'");
         return $query->row();
     }
 }

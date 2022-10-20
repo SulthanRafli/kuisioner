@@ -22,7 +22,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#">SETARA</a>
+      <a class="navbar-brand" href="#" style="font-size: 3rem !important;">SETARA</a>
     </div>
   </nav>
 
@@ -32,9 +32,8 @@
       <div class="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-start">
         <div class="text mt-5 container">
           <div class="row">
-            <div class="col-lg-8">
-              <h1 class="mb-3"><span>Survei Indeks</span> <span>Kepuasan</span> <span>Masyarakat</span></h1>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt autem omnis quae quod nisi consequuntur </p>
+            <div class="col-lg-8" style="align-self: center !important;">
+              <h1 class="mb-3" style="font-size: 50px !important;"><span>Survei Indeks</span> <span>Kepuasan</span> <span>Masyarakat</span></h1>
               <p><a href="#basic" class="btn btn-secondary px-4 py-3">Mulai Pengisian</a></p>
             </div>
             <div class="col-lg-4">
@@ -61,48 +60,6 @@
                 <h4><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Data Responden</span></h4>
               </div>
               <div class="card-body">
-                <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Nama</span></label>
-                  <div class="row">
-                    <div class="col-lg-8">
-                      <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Masukkan Nama" id="inputRecord1" name="nama" required="required">
-                        <div class="input-group-append">
-                          <button type="button" class="btn btn-success" aria-label="Help" id="btnRecord1" onclick="speechToText(1)" name="nama" id="nama">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
-                              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
-                              <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4" style="padding: 10px 10px 10px 18px">
-                      <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)" id="textRecord1" onclick="speechToText(1)"> Klik untuk rekam </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Umur</span></label>
-                  <div class="row">
-                    <div class="col-lg-8">
-                      <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Masukkan Umur" id="inputRecord2" name="umur" required="required">
-                        <div class="input-group-append">
-                          <button type="button" class="btn btn-success" aria-label="Help" id="btnRecord2" onclick="speechToText(2)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
-                              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
-                              <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4" style="padding: 10px 10px 10px 18px">
-                      <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)" id="textRecord2" onclick="speechToText(2)"> Klik untuk rekam </span>
-                    </div>
-                  </div>
-                </div>
                 <div class="form-group">
                   <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Jenis Kelamin</span></label>
                   <div class="form-check">
@@ -165,56 +122,32 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pekerjaan</span></label>
+                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Usia</span></label>
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" id="pnsId" value="PNS" checked required="required">
-                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="pnsId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">PNS</span>
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" id="tniId" value="TNI/Polri" required="required">
-                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="tniId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">TNI/Polri</span>
+                        <input class="form-check-input" type="radio" name="usia" id="21Id" value="< 21 Tahun" checked required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="21Id">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">
+                            < 21 Tahun</span>
                         </label>
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" id="pegawaiSwastaId" value="Pegawai Swasta" required="required">
-                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="pegawaiSwastaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pegawai Swasta</span>
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" id="wiraswastaId" value="Wiraswasta" required="required">
-                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="wiraswastaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Wiraswasta</span>
+                        <input class="form-check-input" type="radio" name="usia" id="2150Id" value="21 - 50 Tahun" required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="2150Id">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">21 - 50 Tahun</span>
                         </label>
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" id="advokatId" value="Advokat/Pengacara" required="required">
-                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="advokatId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Advokat/Pengacara</span>
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" id="mahasiswaId" value="Mahasiswa/Pelajar" required="required">
-                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="mahasiswaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Mahasiswa/Pelajar</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" id="lainLainId" value="Lain - Lain" required="required">
-                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="lainLainId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Lain - Lain</span>
+                        <input class="form-check-input" type="radio" name="usia" id="50Id" value="> 50 Tahun" required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="50Id">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">> 50 Tahun</span>
                         </label>
                       </div>
                     </div>
@@ -258,6 +191,90 @@
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Layanan Prodeo</span>
                         </label>
                       </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="jenisLayanan" id="persuratanId" value="Layanan Persuratan" required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="persuratanId">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Layanan Persuratan</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pekerjaan</span></label>
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="pnsId" value="PNS" checked required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="pnsId">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">PNS</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="tniId" value="TNI/Polri" required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="tniId">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">TNI/Polri</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="pegawaiSwastaId" value="Pegawai Swasta" required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="pegawaiSwastaId">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pegawai Swasta</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="wiraswastaId" value="Wiraswasta" required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="wiraswastaId">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Wiraswasta</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="advokatId" value="Advokat/Pengacara" required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="advokatId">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Advokat/Pengacara</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="mahasiswaId" value="Mahasiswa/Pelajar" required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="mahasiswaId">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Mahasiswa/Pelajar</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="lainLainId" value="Lain - Lain" required="required">
+                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="lainLainId">
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Lain - Lain</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" id="pekerjaanLainnyaId" style="display: none;">
+                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pekerjaan Lainnya</span></label>
+                  <div class="row">
+                    <div class="col-lg-8">
+                      <div class="input-group">
+                        <input class="form-control" type="text" placeholder="Masukkan Pekerjaan" id="inputRecord1" name="pekerjaanLainnya">
+                        <div class="input-group-append">
+                          <button type="button" class="btn btn-success" aria-label="Help" id="btnRecord1" onclick="speechToText(1)" name="pekerjaanLainnya" id="pekerjaanLainnya">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" />
+                              <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4" style="padding: 10px 10px 10px 18px">
+                      <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)" id="textRecord1" onclick="speechToText(1)"> Klik untuk rekam </span>
                     </div>
                   </div>
                 </div>
@@ -319,28 +336,28 @@
                     <div class="form-group">
                       <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $row->pertanyaan; ?></span> ?</label>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi1; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p1" ?>" checked required="required">
+                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi1; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p1" ?>">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p1" ?>">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $isi1; ?></span>
                           <?php echo $starIsi1 ?>
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi2; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p2" ?>" required="required">
+                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi2; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p2" ?>">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p2" ?>">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $isi2; ?></span>
                           <?php echo $starIsi2 ?>
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi3; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p3" ?>" required="required">
+                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi3; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p3" ?>">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p3" ?>">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"> <?php echo $isi3; ?></span>
                           <?php echo $starIsi3 ?>
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi4; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p4" ?>" required="required">
+                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi4; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p4" ?>">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p4" ?>">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"> <?php echo $isi4; ?></span>
                           <?php echo $starIsi4 ?>
@@ -387,7 +404,7 @@
         <div class="col-md">
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">SETARA</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt autem omnis quae quod nisi consequuntur </p>
+            <p>Survei Elektronik Teknologi Audio Ramah Disabilitas</p>
           </div>
         </div>
         <div class="col-md">
@@ -526,6 +543,16 @@
       alert("Your Browser does not support Speech Recognition, Please Use Google Chrome");
     }
 
+    function checkLainnya() {
+      $("#inputRecord1").val(null);
+      const value = document.querySelector('input[name="pekerjaan"]:checked').value;
+      if (value == 'Lain - Lain') {
+        $("#pekerjaanLainnyaId").css('display', 'inline');
+      } else {
+        $("#pekerjaanLainnyaId").css('display', 'none');
+      }
+    }
+
     function save() {
       $("#basic").addClass('was-validated');
       $("#basic").submit(function(e) {
@@ -569,6 +596,7 @@
         });
         return false;
       });
+
     }
   </script>
 

@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
+  <title>SETARA</title>
   <meta charset="utf-8">
-  <title>Sistem Informasi Kuisioner Survey</title>
-  <link href="assetsh/gambar/Bg3.png" rel="shortcut icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>/assetsh/theme/bootstrap.css" media="screen">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>/assetsh/theme/usebootstrap.css">
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-      <script src="bootstrap/html5shiv.js"></script>
-      <script src="bootstrap/respond.min.js"></script>
-    <![endif]-->
-  <script src="<?php echo base_url(); ?>/assetsh/js/Chart.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="<?php echo base_url(); ?>/assetsh/gambar/logo-setara.png" rel="shortcut icon" />
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assetsh/bootstrap4/css/animate.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assetsh/bootstrap4/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assetsh/bootstrap4/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assetsh/bootstrap4/css/magnific-popup.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assetsh/bootstrap4/css/flaticon.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>/assetsh/bootstrap4/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="position: sticky !important; top: 0 !important; background-color: #8359a3 !important;">
     <div class="container">
-      <div class="navbar-header">
-        <a href="<?php echo base_url(); ?>/Hasil" class="navbar-brand">Sistem Informasi Kuisioner Survey</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-main">
-      </div>
+      <a class="navbar-brand" href="#">SETARA</a>
     </div>
-  </div>
-  <div class="page-header">
-    <h1 id="navbar">Hasil Kuisioner</h1>
-  </div>
-  <div class="panel panel-info col-lg-3">
-    <div class="panel-heading">
-      <h3 class="panel-title">Panel info</h3>
-    </div>
-    <div class="panel-body">
-      <div class="list-group">
-        <?php foreach ($list_pertanyaan as $row) { ?>
-          <a href="<?php echo base_url("Hasil/$tipe/$row->id"); ?>" class="list-group-item">
-            Pertanyaan <?php echo $row->no ?>
-          </a>
-        <?php } ?>
-        <a href="<?php echo base_url(); ?>Datatabel" class="list-group-item">
-          Kembali
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="container col-lg-9">
-    <p> Dari <span class="label label-success"><?php echo $total->total; ?></span> Responden Untuk pertanyaan Ini Menjawab <?php echo str_replace("*", '', $pertanyaan->isi1) ?> = <span class="label label-info"><?php echo $total_isi1->total; ?></span>, <?php echo str_replace("*", '', $pertanyaan->isi2) ?> = <span class="label label-info"><?php echo $total_isi2->total; ?></span>, <?php echo str_replace("*", '', $pertanyaan->isi3) ?> = <span class="label label-info"><?php echo $total_isi3->total; ?></span>, Dan <?php echo str_replace("*", '', $pertanyaan->isi4) ?> = <span class="label label-info"><?php echo $total_isi4->total; ?></span> Orang</p>
-    <div class="page-header">
-      <h1 id="navbar">Grafik</h1>
-    </div>
+  </nav>
 
-    <canvas id="myChart" width="400" height="100"></canvas>
-
-  </div>
+  <section class="ftco-section services-section bg-light">
+    <div class="row" style="margin: 2rem;">
+      <div class="col-lg-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            List Pertanyaan
+          </div>
+          <ul class="list-group list-group-flush">
+            <?php foreach ($list_pertanyaan as $row) { ?>
+              <a class="list-group-item" href="<?php echo base_url("Hasil/$tipe/$row->id"); ?>" class="list-group-item" style="color: gray">
+                Pertanyaan <?php echo $row->no ?>
+              </a>
+            <?php } ?>
+            <a class="list-group-item" href="<?php echo base_url(); ?>Admin" class="list-group-item" style="color: gray">
+              Kembali
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <p> Dari <span class="badge badge-success"><?php echo $total->total; ?></span> Responden Untuk pertanyaan Ini Menjawab <?php echo str_replace("*", '', $pertanyaan->isi1) ?> = <span class="badge badge-info"><?php echo $total_isi1->total; ?></span>, <?php echo str_replace("*", '', $pertanyaan->isi2) ?> = <span class="badge badge-info"><?php echo $total_isi2->total; ?></span>, <?php echo str_replace("*", '', $pertanyaan->isi3) ?> = <span class="badge badge-info"><?php echo $total_isi3->total; ?></span>, Dan <?php echo str_replace("*", '', $pertanyaan->isi4) ?> = <span class="badge badge-info"><?php echo $total_isi4->total; ?></span> Orang</p>
+        <div class="page-header">
+          <h1 id="navbar">Grafik</h1>
+        </div>
+        <canvas id="myChart" width="400" height="100"></canvas>
+      </div>
+    </div>
+  </section>
+  <script src="<?php echo base_url(); ?>/assetsh/js/Chart.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/popper.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/bootstrap.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.easing.1.3.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.waypoints.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.stellar.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/owl.carousel.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.animateNumber.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/scrollax.min.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
@@ -99,9 +107,6 @@
       }
     });
   </script>
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="<?php echo base_url(); ?>/assetsh/bootstrap/bootstrap.min.js"></script>
-  <script src="<?php echo base_url(); ?>/assetsh/bootstrap/usebootstrap.js"></script>
 </body>
 
 </html>

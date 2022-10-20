@@ -12,11 +12,10 @@ class input_model extends CI_ModeL
     {
         $this->db->trans_begin();
 
-        $data['responden'] = $this->input->post('nama');
-        $data['umur'] = $this->input->post('umur');
+        $data['umur'] = $this->input->post('usia');
         $data['jenis_kelamin'] = $this->input->post('jenisKelamin');
         $data['pendidikan'] = $this->input->post('pendidikan');
-        $data['pekerjaan'] = $this->input->post('pekerjaan');
+        $data['pekerjaan'] = $this->input->post('pekerjaan') == 'Lain - Lain' ? $this->input->post('pekerjaanLainnya') : $this->input->post('pekerjaan');
         $data['jenis_layanan'] = $this->input->post('jenisLayanan');
         $data['saran'] = $this->input->post('saran');
 
@@ -26,8 +25,8 @@ class input_model extends CI_ModeL
         $batch_array    = array();
         foreach ($this->fetch_data($tipe)->result() as $row) {
             $temp_isi = explode("$", $this->input->post('p' . $row->id));
-            $data_detail['isi'] = $temp_isi[1];
-            $data_detail['id_pertanyaan'] = $temp_isi[0];
+            $data_detail['isi'] = $temp_isi[0] == '' ? null : $temp_isi[1];
+            $data_detail['id_pertanyaan'] =  $row->id;
             $data_detail['id_kuisioner'] = $idKuisioner;
             $batch_array[] = $data_detail;
         }
