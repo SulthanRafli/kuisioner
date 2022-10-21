@@ -63,7 +63,7 @@
                 <div class="form-group">
                   <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Jenis Kelamin</span></label>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="jenisKelamin" id="lakiLakiId" value="Laki - Laki" checked required="required">
+                    <input class="form-check-input" type="radio" name="jenisKelamin" id="lakiLakiId" value="Laki - Laki" required="required">
                     <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="lakiLakiId">
                       <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Laki - Laki</span>
                     </label>
@@ -80,7 +80,7 @@
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pendidikan" id="sdId" value="SD" checked required="required">
+                        <input class="form-check-input" type="radio" name="pendidikan" id="sdId" value="SD" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="sdId">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">SD</span>
                         </label>
@@ -128,7 +128,7 @@
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="usia" id="21Id" value="< 21 Tahun" checked required="required">
+                        <input class="form-check-input" type="radio" name="usia" id="21Id" value="< 21 Tahun" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="21Id">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">
                             < 21 Tahun</span>
@@ -158,7 +158,7 @@
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="jenisLayanan" id="administrasiId" value="Administrasi Persidangan" checked required="required">
+                        <input class="form-check-input" type="radio" name="jenisLayanan" id="administrasiId" value="Administrasi Persidangan" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="administrasiId">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Administrasi Persidangan</span>
                         </label>
@@ -207,7 +207,7 @@
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="pnsId" value="PNS" checked required="required">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="pnsId" value="PNS" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="pnsId">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">PNS</span>
                         </label>
@@ -545,7 +545,7 @@
 
     function checkLainnya() {
       $("#inputRecord1").val(null);
-      const value = document.querySelector('input[name="pekerjaan"]:checked').value;
+      const value = document.querySelector('input[name="pekerjaan"]').value;
       if (value == 'Lain - Lain') {
         $("#pekerjaanLainnyaId").css('display', 'inline');
       } else {
