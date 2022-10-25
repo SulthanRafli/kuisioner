@@ -33,7 +33,13 @@
         <div class="text mt-5 container">
           <div class="row">
             <div class="col-lg-8" style="align-self: center !important;">
-              <h1 class="mb-3" style="font-size: 50px !important;"><span>Survei Indeks</span> <span>Kepuasan</span> <span>Masyarakat</span></h1>
+              <h1 class="mb-3" style="font-size: 50px !important;">
+                <?php if ($tipe == 'ikm') { ?>
+                  <span>Survei Indeks</span> <span>Kepuasan</span> <span>Masyarakat</span>
+                <?php } else { ?>
+                  <span>Survei Indeks</span> <span>Persepsi</span> <span>Korupsi</span>
+                <?php } ?>
+              </h1>
               <p><a href="#basic" class="btn btn-secondary px-4 py-3">Mulai Pengisian</a></p>
             </div>
             <div class="col-lg-4">
