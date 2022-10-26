@@ -22,7 +22,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#" style="font-size: 3rem !important; line-height: 25px;">SETARA <br> <small style="font-size: 1rem !important; color: lightgray;">Survei Elektronik Teknologi Audio Ramah Disabiltas</small></a>            
+      <a class="navbar-brand" href="#" style="font-size: 3.5rem !important; line-height: 25px;">SETARA <br> <small style="font-size: 1rem !important; color: lightgray;">Survei Elektronik Teknologi Audio Ramah Disabiltas</small></a>            
     </div>
   </nav>
 
@@ -32,7 +32,7 @@
       <div class="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-start">
         <div class="text mt-5 container">
           <div class="row">
-            <div class="col-lg-8" style="align-self: center !important;">
+            <div class="col-lg-7" style="align-self: center !important;">
               <h1 class="mb-3" style="font-size: 50px !important;">
                 <?php if ($tipe == 'ikm') { ?>
                   <span>Survei Indeks</span> <span>Kepuasan</span> <span>Masyarakat</span>
@@ -42,8 +42,8 @@
               </h1>
               <p><a href="#basic" class="btn btn-secondary px-4 py-3">Mulai Pengisian</a></p>
             </div>
-            <div class="col-lg-4">
-              <img style="width: 21rem; height: 25rem;" class="" src="<?php echo base_url(); ?>/assetsh/gambar/logo-setara.png" alt="">
+            <div class="col-lg-5">
+              <img style="width: 28rem; height: 28rem;" class="" src="<?php echo base_url(); ?>/assetsh/gambar/logo.gif" alt="">
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-header">
-                <h4><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Data Responden</span></h4>
+                <h4><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Profil Responden</span></h4>
               </div>
               <div class="card-body">
                 <div class="form-group">
@@ -106,23 +106,23 @@
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pendidikan" id="diplomaId" value="Diploma (D1,D2,D3,D4)" required="required">
+                        <input class="form-check-input" type="radio" name="pendidikan" id="diplomaId" value="S1" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="diplomaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Diploma (D1,D2,D3,D4)</span>
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">S1</span>
                         </label>
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pendidikan" id="s1Id" value="Sarjana (S1)" required="required">
+                        <input class="form-check-input" type="radio" name="pendidikan" id="s1Id" value="S2" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="s1Id">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Sarjana (S1)</span>
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">S2</span>
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pendidikan" id="s2Id" value="S2 Keatas" required="required">
+                        <input class="form-check-input" type="radio" name="pendidikan" id="s2Id" value="S3" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="s2Id">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">S2 Keatas</span>
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">S3</span>
                         </label>
                       </div>
                     </div>
@@ -197,15 +197,13 @@
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Layanan Prodeo</span>
                         </label>
                       </div>
-                    </div>
-                    <div class="col-lg-3">
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="jenisLayanan" id="persuratanId" value="Layanan Persuratan" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="persuratanId">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Layanan Persuratan</span>
                         </label>
                       </div>
-                    </div>
+                    </div>                    
                   </div>
                 </div>
                 <div class="form-group">
@@ -219,48 +217,40 @@
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="tniId" value="TNI/Polri" required="required">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="tniId" value="TNI" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="tniId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">TNI/Polri</span>
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">TNI</span>
                         </label>
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="pegawaiSwastaId" value="Pegawai Swasta" required="required">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="pegawaiSwastaId" value="Swasta" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="pegawaiSwastaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pegawai Swasta</span>
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Swasta</span>
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="wiraswastaId" value="Wiraswasta" required="required">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="wiraswastaId" value="Wirausaha" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="wiraswastaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Wiraswasta</span>
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Wirausaha</span>
                         </label>
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="advokatId" value="Advokat/Pengacara" required="required">
+                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="advokatId" value="POLRI" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="advokatId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Advokat/Pengacara</span>
+                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">POLRI</span>
                         </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="mahasiswaId" value="Mahasiswa/Pelajar" required="required">
-                        <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="mahasiswaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Mahasiswa/Pelajar</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
+                      </div>              
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="lainLainId" value="Lain - Lain" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="lainLainId">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Lain - Lain</span>
                         </label>
-                      </div>
-                    </div>
+                      </div>        
+                    </div>                  
                   </div>
                 </div>
                 <div class="form-group" id="pekerjaanLainnyaId" style="display: none;">
@@ -299,7 +289,7 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-header">
-                <h4><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Form Survei</span></h4>
+                <h4><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pertanyaan</span></h4>
               </div>
               <div class="card-body">
                 <?php foreach ($fetch_data->result() as $row) {
@@ -340,7 +330,7 @@
                 ?>
                   <fieldset>
                     <div class="form-group">
-                      <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $row->pertanyaan; ?></span> ?</label>
+                      <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $row->no . ". " . $row->pertanyaan; ?></span> ?</label>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi1; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p1" ?>">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p1" ?>">
@@ -373,7 +363,7 @@
                   </fieldset>
                 <?php } ?>
                 <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Saran</span></label>
+                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Saran dan Masukan</span></label>
                   <div class="row">
                     <div class="col-lg-8">
                       <div class="input-group">
@@ -390,6 +380,13 @@
                     </div>
                     <div class="col-lg-4" style="padding: 10px 10px 10px 18px">
                       <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)" id="textRecord3" onclick="speechToText(3)"> Klik untuk rekam </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <label>Terima kasih telah berpartisipasi dalam survei ini.</label>
                     </div>
                   </div>
                 </div>
