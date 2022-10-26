@@ -26,7 +26,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="position: sticky !important; top: 0 !important; background-color: #8359a3 !important;">
     <div class="container">
-      <a class="navbar-brand" href="#">SETARA</a>
+      <a class="navbar-brand" href="#" style="font-size: 3rem !important; line-height: 25px;">SETARA <br> <small style="font-size: 1rem !important; color: lightgray;">Survei Elektronik Teknologi Audio Ramah Disabiltas</small></a>            
     </div>
   </nav>
 

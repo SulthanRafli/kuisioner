@@ -22,7 +22,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#" style="font-size: 3rem !important;">SETARA</a>
+      <a class="navbar-brand" href="#" style="font-size: 3rem !important; line-height: 25px;">SETARA <br> <small style="font-size: 1rem !important; color: lightgray;">Survei Elektronik Teknologi Audio Ramah Disabiltas</small></a>            
     </div>
   </nav>
 
@@ -37,7 +37,7 @@
                 <?php if ($tipe == 'ikm') { ?>
                   <span>Survei Indeks</span> <span>Kepuasan</span> <span>Masyarakat</span>
                 <?php } else { ?>
-                  <span>Survei Indeks</span> <span>Persepsi</span> <span>Korupsi</span>
+                  <span>Survei Indeks</span> <span>Persepsi</span> <span>Anti Korupsi</span>
                 <?php } ?>
               </h1>
               <p><a href="#basic" class="btn btn-secondary px-4 py-3">Mulai Pengisian</a></p>
@@ -548,9 +548,9 @@
       alert("Your Browser does not support Speech Recognition, Please Use Google Chrome");
     }
 
-    function checkLainnya() {
+    function checkLainnya() {      
       $("#inputRecord1").val(null);
-      const value = document.querySelector('input[name="pekerjaan"]').value;
+      const value = document.querySelector('input[name="pekerjaan"]:checked').value;      
       if (value == 'Lain - Lain') {
         $("#pekerjaanLainnyaId").css('display', 'inline');
       } else {
