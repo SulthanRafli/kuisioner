@@ -34,9 +34,13 @@
             Daftar Menu
           </div>
           <ul class="list-group list-group-flush">
-            <a href="<?php echo base_url(); ?>Datatabel/datapertanyaan" class="list-group-item" style="color: gray; cursor: pointer;"> Data Pertanyaan
+          <a href="<?php echo base_url(); ?>Datatabel/datapertanyaanikm" class="list-group-item" style="color: gray; cursor: pointer;"> Data Pertanyaan IKM
             </a>
-            <a href="<?php echo base_url(); ?>Datatabel/dataresponden" class="list-group-item" style="color: gray; cursor: pointer;"> Data Responden
+            <a href="<?php echo base_url(); ?>Datatabel/datapertanyaanipak" class="list-group-item" style="color: gray; cursor: pointer;"> Data Pertanyaan IPAK
+            </a>
+            <a href="<?php echo base_url(); ?>Datatabel/datarespondenikm" class="list-group-item" style="color: gray; cursor: pointer;"> Data Responden IKM
+            </a>
+            <a href="<?php echo base_url(); ?>Datatabel/datarespondenipak" class="list-group-item" style="color: gray; cursor: pointer;"> Data Responden IPAK
             </a>
             <a href="<?php echo base_url(); ?>Hasil/ipak" class="list-group-item" style="color: gray;cursor: pointer;">Lihat Hasil IPAK</a>
             <a href="<?php echo base_url(); ?>Hasil/ikm" class="list-group-item" style="color: gray;cursor: pointer;">Lihat Hasil IKM</a>

@@ -292,7 +292,7 @@
                 <h4><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pertanyaan</span></h4>
               </div>
               <div class="card-body">
-                <?php foreach ($fetch_data->result() as $row) {
+                <?php foreach ($fetch_data as $row) {
                   $isi1 = str_replace("*", '', $row->isi1);
                   $isi2 = str_replace("*", '', $row->isi2);
                   $isi3 = str_replace("*", '', $row->isi3);
@@ -330,30 +330,30 @@
                 ?>
                   <fieldset>
                     <div class="form-group">
-                      <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $row->no . ". " . $row->pertanyaan; ?></span> ?</label>
+                      <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $row->pertanyaan; ?></span> ?</label>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi1; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p1" ?>">
+                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi1; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p1" ?>" required>
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p1" ?>">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $isi1; ?></span>
                           <?php echo $starIsi1 ?>
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi2; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p2" ?>">
+                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi2; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p2" ?>" required>
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p2" ?>">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $isi2; ?></span>
                           <?php echo $starIsi2 ?>
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi3; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p3" ?>">
+                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi3; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p3" ?>" required>
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p3" ?>">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"> <?php echo $isi3; ?></span>
                           <?php echo $starIsi3 ?>
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi4; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p4" ?>">
+                        <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi4; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p4" ?>" required>
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p4" ?>">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"> <?php echo $isi4; ?></span>
                           <?php echo $starIsi4 ?>

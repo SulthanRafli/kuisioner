@@ -36,7 +36,7 @@
           <ul class="list-group list-group-flush">
             <?php foreach ($list_pertanyaan as $row) { ?>
               <a class="list-group-item" href="<?php echo base_url("Hasil/$tipe/$row->id"); ?>" class="list-group-item" style="color: gray">
-                Pertanyaan <?php echo $row->no ?>
+                Pertanyaan <?php echo $row->id ?>
               </a>
             <?php } ?>
             <a class="list-group-item" href="<?php echo base_url(); ?>Admin" class="list-group-item" style="color: gray">
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="col-lg-9">
-        <p> Dari <span class="badge badge-success"><?php echo $total->total; ?></span> Responden Untuk pertanyaan Ini Menjawab <?php echo str_replace("*", '', $pertanyaan->isi1) ?> = <span class="badge badge-info"><?php echo $total_isi1->total; ?></span>, <?php echo str_replace("*", '', $pertanyaan->isi2) ?> = <span class="badge badge-info"><?php echo $total_isi2->total; ?></span>, <?php echo str_replace("*", '', $pertanyaan->isi3) ?> = <span class="badge badge-info"><?php echo $total_isi3->total; ?></span>, Dan <?php echo str_replace("*", '', $pertanyaan->isi4) ?> = <span class="badge badge-info"><?php echo $total_isi4->total; ?></span> Orang</p>
+        <p> Dari <span class="badge badge-success"><?php echo $total; ?></span> Responden Untuk pertanyaan Ini Menjawab <?php echo str_replace("*", '', $pertanyaan->isi1) ?> = <span class="badge badge-info"><?php echo $total_isi1; ?></span>, <?php echo str_replace("*", '', $pertanyaan->isi2) ?> = <span class="badge badge-info"><?php echo $total_isi2; ?></span>, <?php echo str_replace("*", '', $pertanyaan->isi3) ?> = <span class="badge badge-info"><?php echo $total_isi3; ?></span>, Dan <?php echo str_replace("*", '', $pertanyaan->isi4) ?> = <span class="badge badge-info"><?php echo $total_isi4; ?></span> Orang</p>
         <div class="page-header">
           <h1 id="navbar">Grafik</h1>
         </div>
@@ -76,7 +76,7 @@
         labels: ["<?php echo str_replace("*", '', $pertanyaan->isi1) ?>", "<?php echo str_replace("*", '', $pertanyaan->isi2) ?>", "<?php echo str_replace("*", '', $pertanyaan->isi3) ?>", "<?php echo str_replace("*", '', $pertanyaan->isi4) ?>"],
         datasets: [{
           label: '',
-          data: [<?php echo $total_isi1->total; ?>, <?php echo $total_isi2->total; ?>, <?php echo $total_isi3->total; ?>, <?php echo $total_isi4->total; ?>],
+          data: [<?php echo $total_isi1; ?>, <?php echo $total_isi2; ?>, <?php echo $total_isi3; ?>, <?php echo $total_isi4; ?>],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',

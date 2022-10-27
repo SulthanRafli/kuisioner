@@ -86,21 +86,41 @@ class Datatabel extends CI_Controller
         $this->_example_output($output);
     }
 
-    public function datapertanyaan()
+    public function datapertanyaanikm()
     {
         $crud = new grocery_CRUD();
-        $crud->set_table('t_pertanyaan');
+        $crud->set_table('t_pertanyaan_ikm');
         $crud->columns('pertanyaan', 'isi1', 'isi2', 'isi3', 'isi4');
         $output = $crud->render();
 
         $this->_example_output($output);
     }
 
-    public function dataresponden()
+    public function datapertanyaanipak()
     {
         $crud = new grocery_CRUD();
-        $crud->set_table('t_kuisioner');
-        $crud->columns('umur', 'jenis_kelamin', 'pendidikan', 'pekerjaan', 'jenis_layanan', 'saran');
+        $crud->set_table('t_pertanyaan_ipak');
+        $crud->columns('pertanyaan', 'isi1', 'isi2', 'isi3', 'isi4');
+        $output = $crud->render();
+
+        $this->_example_output($output);
+    }
+
+    public function datarespondenikm()
+    {
+        $crud = new grocery_CRUD();
+        $crud->set_table('t_kuisioner_ikm');
+        $crud->columns('umur', 'jenis_kelamin', 'pendidikan', 'pekerjaan', 'jenis_layanan', 'saran', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 'p12', 'p13', 'p14', 'p15', 'p16', 'p17', 'p18', 'p19', 'p20', 'p21');
+        $output = $crud->render();
+
+        $this->_example_output($output);
+    }
+    
+    public function datarespondenipak()
+    {
+        $crud = new grocery_CRUD();
+        $crud->set_table('t_kuisioner_ipak');
+        $crud->columns('umur', 'jenis_kelamin', 'pendidikan', 'pekerjaan', 'jenis_layanan', 'saran', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10');
         $output = $crud->render();
 
         $this->_example_output($output);

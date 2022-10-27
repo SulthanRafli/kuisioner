@@ -6,34 +6,31 @@ class Input extends CI_Controller
     {
         parent::__construct();
         $this->load->database();
-        $this->load->model('input_model');
+        $this->load->model('pertanyaan_ikm_model');
+        $this->load->model('input_ikm_model');
+        $this->load->model('pertanyaan_ipak_model');
+        $this->load->model('input_ipak_model');
     }
 
     public function index()
-    {
-        $this->load->model("input_model");
-
-        $data2["fetch_data"] = $this->input_model->fetch_data('ipak');
+    {        
+        $data2["fetch_data"] = $this->pertanyaan_ipak_model->fetch_data();
         $data2["tipe"] = 'ipak';
 
         $this->load->view("input", $data2);
     }
 
     public function ipak()
-    {
-        $this->load->model("input_model");
-
-        $data2["fetch_data"] = $this->input_model->fetch_data('ipak');
+    {        
+        $data2["fetch_data"] = $this->pertanyaan_ipak_model->fetch_data();
         $data2["tipe"] = 'ipak';
 
         $this->load->view("input", $data2);
     }
 
     public function ikm()
-    {
-        $this->load->model("input_model");
-
-        $data2["fetch_data"] = $this->input_model->fetch_data('ikm');
+    {        
+        $data2["fetch_data"] = $this->pertanyaan_ikm_model->fetch_data();
         $data2["tipe"] = 'ikm';
 
         $this->load->view("input", $data2);
@@ -48,7 +45,7 @@ class Input extends CI_Controller
 
     public function save_kuisioner($tipe)
     {
-        $result     = $this->input_model->save($tipe);
+        $result     = $tipe == 'ipak' ? $this->input_ipak_model->save() : $this->input_ikm_model->save();
         $status     = $result;
 
         echo json_encode(array(
