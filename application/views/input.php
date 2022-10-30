@@ -459,8 +459,8 @@
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.animateNumber.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/scrollax.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/main.js"></script>
-  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/responsivevoice.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>  
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/responsivevoice.js"></script>
   <script>
     let speech = null;
     let baseUrl = "<?php echo base_url(); ?>";

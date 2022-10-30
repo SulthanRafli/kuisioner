@@ -297,9 +297,10 @@ if (typeof responsiveVoice === "undefined") {
 				: {}
 		));
 	});
-	if ("undefined" != typeof responsiveVoice)
-		console.log("ResponsiveVoice already loaded"), console.log(responsiveVoice);
-	else
+	if ("undefined" != typeof responsiveVoice) {
+		
+    }
+	else {
 		var ResponsiveVoice = function () {
 				function f(b) {
 					b = b.replace(/([\n\r])+/gm, "\n");
@@ -313,8 +314,7 @@ if (typeof responsiveVoice === "undefined") {
 					return b;
 				}
 				function k(b, c) {
-					if (!q) return b;
-					console.log(c);
+					if (!q) return b;					
 					var d = b;
 					try {
 						for (var e = 0; e < q.length; e++) {
@@ -344,9 +344,7 @@ if (typeof responsiveVoice === "undefined") {
 						return d;
 					} catch (u) {
 						return (
-							console.warn(
-								"ResponsiveVoice: There was an error while processing the textReplacements array"
-							),
+							null,
 							b
 						);
 					}
@@ -378,8 +376,7 @@ if (typeof responsiveVoice === "undefined") {
 					return !0;
 				}
 				var a = this;
-				a.version = "1.8.3";
-				console.log("ResponsiveVoice r" + a.version);
+				a.version = "1.8.3";				
 				a.responsivevoices = [
 					{
 						name: "UK English Female",
@@ -3733,29 +3730,26 @@ if (typeof responsiveVoice === "undefined") {
 				a.enableEstimationTimeout = !0;
 				a.analytics = { characterCount: 0 };
 				a.log = function (b) {
-					a.debug && console.log(b);
+					a.debug
 				};
 				a.init = function () {
 					a.is_wordpress = m();
 					a.is_bundle = l();
 					"undefined" == typeof rvApiKey &&
-						console.error(
-							"ResponsiveVoice missing API key. See https://responsivevoice.org/register?devtools=" +
-								encodeURIComponent(window.location.href)
-						);
+						null;
 					if (a.is_android || a.iOS || a.is_safari) a.useTimer = !0;
 					a.is_opera || "undefined" === typeof speechSynthesis
-						? (console.log("RV: Voice synthesis not supported"),
+						? (null,
 						  a.enableFallbackMode())
 						: setTimeout(function () {
 								var b = setInterval(function () {
 									var c = window.speechSynthesis.getVoices();
 									0 != c.length ||
 									(null != a.systemvoices && 0 != a.systemvoices.length)
-										? (console.log("RV: Voice support ready"),
+										? (null,
 										  a.systemVoicesReady(c),
 										  clearInterval(b))
-										: (console.log("Voice support NOT ready"),
+										: (null,
 										  a.voicesupport_attempts++,
 										  a.voicesupport_attempts > a.VOICESUPPORT_ATTEMPTLIMIT &&
 												(clearInterval(b),
@@ -3768,10 +3762,8 @@ if (typeof responsiveVoice === "undefined") {
 																: a.iOS9
 																? a.systemVoicesReady(a.cache_ios9_voices)
 																: a.systemVoicesReady(a.cache_ios_voices),
-														  console.log("RV: Voice support ready (cached)"))
-														: (console.log(
-																"RV: speechSynthesis present but no system voices found"
-														  ),
+														  null)
+														: (null,
 														  a.enableFallbackMode())
 													: a.enableFallbackMode()));
 								}, 100);
@@ -3789,8 +3781,7 @@ if (typeof responsiveVoice === "undefined") {
 				};
 				a.enableFallbackMode = function () {
 					a.fallbackMode = !0;
-					a.forcedFallbackMode = !0;
-					console.log("RV: Enabling fallback mode");
+					a.forcedFallbackMode = !0;					
 					a.mapRVs();
 					null != a.OnVoiceReady && a.OnVoiceReady.call();
 					a.Dispatch("OnReady");
@@ -3832,20 +3823,14 @@ if (typeof responsiveVoice === "undefined") {
 								a.setDefaultVoice(g.name);
 							} else g = a.getResponsiveVoice(c);
 							if (g) {
-								!0 === g.deprecated &&
-									console.warn(
-										'ResponsiveVoice: Voice "' +
-											g.name +
-											'" is deprecated; it might not always be the right gender, and could be removed in future releases'
-									);
+								!0 === g.deprecated									
 								var h = {};
 								if (null != g.mappedProfile) h = g.mappedProfile;
 								else if (
 									((h.systemvoice = a.getMatchedVoice(g)),
 									(h.collectionvoice = {}),
 									null == h.systemvoice)
-								) {
-									console.log("RV: ERROR: No voice found for: " + c);
+								) {									
 									return;
 								}
 								b = k(b, h);
@@ -3888,8 +3873,7 @@ if (typeof responsiveVoice === "undefined") {
 										r.push(u);
 									}
 									0 < p.length && e(p);
-								} else e(b);
-								console.log(r);
+								} else e(b);								
 								a.multipartText = r;
 								if (a.checkSpeechAllowed()) {
 									a.fallbackMode &&
@@ -3980,7 +3964,7 @@ if (typeof responsiveVoice === "undefined") {
 													  })),
 												a.utterances.push(e),
 												0 == g && (a.currentMsg = e),
-												console.log(e),
+												null,
 												a.tts_speak(e);
 										else if (
 											a.fallbackMode &&
@@ -4085,7 +4069,7 @@ if (typeof responsiveVoice === "undefined") {
 								} else
 									a.scheduledSpeak = { text: b, voicename: c, parameters: d };
 							} else
-								console.error("Selected voice does not exist: " + c),
+								null,
 									a.Dispatch("OnMissingVoiceError", { voice: c });
 						}
 					} else
@@ -4178,21 +4162,11 @@ if (typeof responsiveVoice === "undefined") {
 								function c() {
 									if (this.readyState == this.DONE && 200 !== this.status)
 										switch (this.status) {
-											case 400:
-												console.error(
-													"ResponsiveVoice audio could not be loaded. Invalid parameters."
-												);
+											case 400:												
 												break;
-											case 403:
-												console.error(
-													"ResponsiveVoice invalid API key. See https://responsivevoice.org/register?devtools=" +
-														encodeURIComponent(window.location.href)
-												);
+											case 403:												
 												break;
-											default:
-												console.error(
-													"ResponsiveVoice audio could not be loaded. There is an issue connecting your browser to the API endpoint."
-												);
+											default:												
 										}
 								}
 								switch (b.target.error.code) {
@@ -4202,10 +4176,7 @@ if (typeof responsiveVoice === "undefined") {
 										d.send();
 										d.onreadystatechange = c;
 										break;
-									default:
-										console.error(
-											"ResponsiveVoice: an unknown error occurred."
-										);
+									default:										
 								}
 						  }),
 						  a.fallback_audio.addEventListener("ended", a.fallback_finishPart),
@@ -4263,16 +4234,11 @@ if (typeof responsiveVoice === "undefined") {
 					var c = b;
 					b = parseFloat(b);
 					isNaN(b)
-						? console.error(
-								"[responsiveVoice.setDefaultRate] invalid argument: " +
-									c.toString()
-						  )
+						? null
 						: 0 === b
-						? console.error("[responsiveVoice.setDefaultRate] rate must be > 0")
+						? null
 						: 1.5 < b
-						? console.error(
-								"[responsiveVoice.setDefaultRate] rate must be <= 1.5"
-						  )
+						? null
 						: (z = b);
 				};
 				a.mapRVs = function () {
@@ -4483,9 +4449,7 @@ if (typeof responsiveVoice === "undefined") {
 								? 1
 								: ++a.allowSpeechDiv_appearances;
 						if (2 < a.allowSpeechDiv_appearances)
-							return (
-								console.log("ResponsiveVoice: Speech not allowed by user"), !1
-							);
+							return;
 						c = document.createElement("style");
 						c.innerHTML =
 							'.rvNotification{position:fixed;background-color:#fff;text-align:center;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-weight:400;line-height:1.5;box-shadow:0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);z-index:10000;width:100vw;left:0;bottom:0;font-size:1rem;padding-bottom:.5em;padding-right:.5em}.rvButtonRow{padding-right:2em;padding-bottom:1em;text-align:right;font-size:medium}.rvButton{cursor:pointer;display:inline-block;margin-left:1em;padding:.8em 2em;border-radius:3px;font-size:small}.rvButtonAllow{border:none;background-color:#2b8cff;color:#fff}.rvButtonDeny{border:1px solid #2b8cff;color:#2b8cff;background-color:#fff}.rvTextRow{padding-top:1em;padding-bottom:2em}@media (min-width:576px){.rvNotification{width:60vw;left:20vw}}@media (min-width:768px){.rvNotification{width:50vw;left:25vw}}@media (min-width:992px){.rvNotification{width:40vw;left:30vw}}@media (min-width:1200px){.rvNotification{width:30vw;left:35vw}}';
@@ -4760,14 +4724,7 @@ if (typeof responsiveVoice === "undefined") {
 						case "pitch":
 						case "volume":
 							var d = Number(b[c]);
-							isNaN(d) &&
-								console.warn(
-									"ResponsiveVoice: the parameter " +
-										c +
-										' has a wrong value "' +
-										b[c] +
-										'". Defaults were used.'
-								);
+							isNaN(d) 								
 							b[c] = isNaN(d) ? "1" : b[c];
 					}
 					return b[c];
@@ -4838,6 +4795,7 @@ if (typeof responsiveVoice === "undefined") {
 				});
 			},
 			responsiveVoice = new ResponsiveVoice();
+    }
 
 	/// -------- RESPONSIVE VOICE ends
 	responsiveVoice.debug = true;
@@ -5124,15 +5082,11 @@ function isHidden() {
 }
 
 function isPrerendered() {
-	var prop = getVisibilityState();
-	//console.log(prop);
-	if (!prop) return false;
-	//console.log(document[prop]);
+	var prop = getVisibilityState();	
+	if (!prop) return false;	
 	if (document[prop] != "prerender") return false;
 	return document[prop];
 }
-console.log("isHidden: " + isHidden());
-console.log("Prerender: " + isPrerendered());
 
 //Analytics
 
@@ -5145,8 +5099,7 @@ if (isPrerendered() && !prerenderUsed) {
 	setTimeout(function () {
 		if (!splitTestEnabled || (splitTestEnabled && splitTest_useGS)) {
 			var txt = GetRandomMsg("");
-			if (txt != null && txt != "") {
-				console.log("Launching search message");
+			if (txt != null && txt != "") {				
 				responsiveVoice.speak(
 					"According to Voicebrite, " + txt,
 					"Indonesian Female"
@@ -5187,9 +5140,7 @@ window.addEventListener("load", function () {
 				}
 			}
 		}, 1000);
-	}
-
-	console.log("Configuring");
+	}	
 
 	//Speak links
 	var _allLinks = document.getElementsByTagName("a");
@@ -5243,8 +5194,7 @@ window.addEventListener("load", function () {
 	}
 
 	function onMouseUp() {
-		selectedText = getSelectionText();
-		console.log("Selected text *" + selectedText + "*");
+		selectedText = getSelectionText();		
 		if (selectedText != last_selectedText && selectedText != "") {
 			last_selectedText = selectedText;
 
@@ -5267,8 +5217,7 @@ window.addEventListener("load", function () {
 			if (
 				config.text_welcomeMessage != null &&
 				config.text_welcomeMessage != ""
-			) {
-				console.log("Launching welcome message");
+			) {				
 				responsiveVoice.speak(
 					GetRandomMsg(config.text_welcomeMessage),
 					"Indonesian Female"
@@ -5290,11 +5239,8 @@ window.addEventListener("load", function () {
 	) {
 		//Wait until we're visible and launch message
 
-		welcomeMessage2Interval = setInterval(function () {
-			console.log("Welcome Message from Google Waiting");
-			if (!isPrerendered() && !welcomeMessage2Launched) {
-				console.log("Welcome Message from Google launched");
-
+		welcomeMessage2Interval = setInterval(function () {			
+			if (!isPrerendered() && !welcomeMessage2Launched) {				
 				welcomeMessage2Launched = true;
 				responsiveVoice.speak(
 					GetRandomMsg(config.text_welcomeMessage2),
@@ -5313,8 +5259,7 @@ window.addEventListener("load", function () {
 				document.body.offsetHeight - 100 &&
 			config.text_speakEndPage != null &&
 			config.text_speakEndPage != ""
-		) {
-			console.log("bottom");
+		) {			
 			window.removeEventListener("scroll", bindScroll);
 
 			responsiveVoice.speak(
@@ -5357,8 +5302,7 @@ window.addEventListener("load", function () {
 	}
 
 	//Exit intent
-	if (config.speakInactivity) {
-		console.info("setting up exit intent");
+	if (config.speakInactivity) {		
 		document.addEventListener("mouseout", exitIntent);
 	}
 
@@ -5375,10 +5319,7 @@ window.addEventListener("load", function () {
 	//Tab and ctrl to speak - Accessibility Navigation
 	var started = 0;
 	if (config.accesibilityNavigation) {
-		console.log("accesibilityNavigation");
-
-		document.addEventListener("keyup", function (e) {
-			console.log("keyup called");
+		document.addEventListener("keyup", function (e) {			
 
 			var code = e.keyCode || e.which;
 
@@ -5425,13 +5366,11 @@ window.addEventListener("load", function () {
 	}
 
 	if (config.accesibilityNavigation2) {
-		document.addEventListener("keyup", function (e) {
-			console.log("keyup called");
+		document.addEventListener("keyup", function (e) {			
 
 			var code = e.keyCode || e.which;
 
-			if (code == "40" && e.ctrlKey) {
-				console.log("ctrl + down arrow");
+			if (code == "40" && e.ctrlKey) {				
 
 				responsiveVoice.speak(
 					document.querySelectorAll("p")[started].textContent,
@@ -5441,8 +5380,7 @@ window.addEventListener("load", function () {
 				document.querySelectorAll("p")[started].scrollIntoView(false);
 				started = started + 1;
 			}
-			if (code == "38" && e.ctrlKey) {
-				console.log("ctrl + up arrow");
+			if (code == "38" && e.ctrlKey) {				
 
 				responsiveVoice.speak(
 					document.querySelectorAll("p")[started].textContent,
@@ -5486,34 +5424,29 @@ function eraseCookie(name) {
 function getOrCreateTest(name, prob, days) {
 	var c = readCookie(name);
 
-	if (c == null) {
-		console.log("Cookie set");
+	if (c == null) {		
 		var v = Math.random() < (prob != null ? prob : 0.5);
 		//1 hour
 		createCookie(name, v.toString(), days != null ? days : 1 / 24);
 		return v;
-	}
-	console.log("Cookie read");
+	}	
 	return c == true.toString();
 }
 
 function oneTimeTest(name, days) {
 	var c = readCookie(name);
 
-	if (c == null) {
-		console.log("Cookie set - one time True");
+	if (c == null) {	
 		//1 hour
 		createCookie(name, false.toString(), days != null ? days : 0.5 / 24);
 		return true;
-	}
-	console.log("Cookie read - one time False");
+	}	
 	return false;
 }
 
 function trackEvent(category, action, name, value) {
 	if (config.trackEvents != true) return;
-
-	console.log("Track " + category + "," + action + "," + name);
+	
 
 	var url = "https://ai.learnbrite.com/analytics.php";
 	var postArray = [];
@@ -5541,8 +5474,7 @@ function trackEvent(category, action, name, value) {
 
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
-			console.log("Tracking Success");
-			console.log(data);
+			
 		}
 	};
 }
