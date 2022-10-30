@@ -536,7 +536,7 @@
       $(document).ready(function() {
         if (!speechSynthesis.speaking) {
           let speechVoice = new SpeechSynthesisUtterance();
-          speechVoice.voice = voices[11];
+          speechVoice.voice = voices[182];
           speechVoice.text = "selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar";
           speechVoice.lang = "id-ID";
           speechSynthesis.speak(speechVoice);
