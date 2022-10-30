@@ -460,6 +460,7 @@
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/scrollax.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=6mn21zDc&ver=111"></script>
   <script>
     let speech = null;
     let baseUrl = "<?php echo base_url(); ?>";
@@ -534,13 +535,9 @@
       };
 
       $(document).ready(function() {
-        if (!speechSynthesis.speaking) {
-          let speechVoice = new SpeechSynthesisUtterance();
-          speechVoice.voice = voices[11];
-          speechVoice.text = "selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar";
-          speechVoice.lang = "id-ID";
-          speechSynthesis.speak(speechVoice);
-        }
+        responsiveVoice.speak('selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar', 'Indonesian Female', {
+              pitch: 1
+        });
       });
     } else {
       alert("Your Browser does not support Speech Recognition, Please Use Google Chrome");
