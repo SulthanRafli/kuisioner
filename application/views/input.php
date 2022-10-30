@@ -22,7 +22,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#" style="font-size: 3.5rem !important; line-height: 25px;">SETARA <br> <small style="font-size: 1rem !important; color: lightgray;">Survei Elektronik Teknologi Audio Ramah Disabiltas</small></a>            
+      <a class="navbar-brand" href="#" style="font-size: 7vmin !important; line-height: 25px;">SETARA <br> <small style="font-size: 3vmin !important; color: lightgray;">Survei Elektronik Teknologi Audio Ramah Disabiltas</small></a>            
     </div>
   </nav>
 
@@ -33,7 +33,7 @@
         <div class="text mt-5 container">
           <div class="row">
             <div class="col-lg-7" style="align-self: center !important;">
-              <h1 class="mb-3" style="font-size: 50px !important;">
+              <h1 class="mb-3" style="font-size: 45px !important;">
                 <?php if ($tipe == 'ikm') { ?>
                   <span>Survei Indeks</span> <span>Kepuasan</span> <span>Masyarakat</span>
                 <?php } else { ?>
@@ -43,7 +43,7 @@
               <p><a href="#basic" class="btn btn-secondary px-4 py-3">Mulai Pengisian</a></p>
             </div>
             <div class="col-lg-5">
-              <img style="width: 28rem; height: 28rem;" class="" src="<?php echo base_url(); ?>/assetsh/gambar/logo.gif" alt="">
+              <img style="width: 100%; height: 100%;" class="" src="<?php echo base_url(); ?>/assetsh/gambar/logo.gif" alt="">
             </div>
           </div>
         </div>
@@ -414,9 +414,10 @@
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">Sosial Media</h2>
             <ul class="list-unstyled">
-              <li><a href="https://twitter.com/PTUN_Makassar"><span class="mr-3 fa fa-twitter"></span><span class="text">PTUN_Makassar</span></a></li>
+              <li><a href="https://twitter.com/PTUN_Makassar"><span class="mr-3 fa fa-twitter"></span><span class="text">@PTUN_Makassar</span></a></li>
               <li><a href="https://www.youtube.com/c/PTUNMakassar"><span class="mr-3 fa fa-youtube"></span><span class="text">PTUN Makassar</span></a></li>
               <li><a href="https://www.facebook.com/PTUN.Makassar"><span class="mr-3 fa fa-facebook"></span><span class="text">Pengadilan Tata Usaha Negara Makassar</span></a></li>
+              <li><a href="https://www.instagram.com/ptun_makassar"><span class="mr-3 fa fa-instagram"></span><span class="text">@ptun_makassar</span></a></li>
               <li><a href="http://ptun-makassar.go.id/"><span class="mr-3 fa fa-globe"></span><span class="text">ptun-makassar.go.id</span></a></li>
               <li><a href="mailto: makassar@ptun.org"><span class="mr-3 fa fa-envelope"></span><span class="text">makassar@ptun.org</span></a></li>
             </ul>
@@ -437,7 +438,7 @@
                     Kode Pos 90222
                   </span>
                 </li>
-                <li><a href="tel:+081144402233"><span class="mr-3 fa fa-phone"></span><span class="text">0411 868784 / 081144402233</span></a></li>
+                <li><a href="tel:+081144402233"><span class="mr-3 fa fa-phone"></span><span class="text">0411 868784 / 0811 4440 2233</span></a></li>
 
               </ul>
             </div>
