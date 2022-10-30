@@ -20,9 +20,10 @@
 
 <body>
 
+
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#" style="font-size: 7vmin !important; line-height: 25px;">SETARA <br> <small style="font-size: 3vmin !important; color: lightgray;">Survei Elektronik Teknologi Audio Ramah Disabiltas</small></a>            
+      <a class="navbar-brand" href="#" style="font-size: 7vmin !important; line-height: 25px;">SETARA <br> <small style="font-size: 3vmin !important; color: lightgray;">Survei Elektronik Teknologi Audio Ramah Disabiltas</small></a>
     </div>
   </nav>
 
@@ -31,6 +32,9 @@
     <div class="container-fluid px-0">
       <div class="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-start">
         <div class="text mt-5 container">
+          <audio id="myAudio" controls hidden>
+            <source src="<?php echo base_url(); ?>/assetsh/bootstrap4/audio/female.mp3" type="audio/mpeg">
+          </audio>
           <div class="row">
             <div class="col-lg-7" style="align-self: center !important;">
               <h1 class="mb-3" style="font-size: 45px !important;">
@@ -203,7 +207,7 @@
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Layanan Persuratan</span>
                         </label>
                       </div>
-                    </div>                    
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -243,14 +247,14 @@
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="advokatId">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">POLRI</span>
                         </label>
-                      </div>              
+                      </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="lainLainId" value="Lain - Lain" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="lainLainId">
                           <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Lain - Lain</span>
                         </label>
-                      </div>        
-                    </div>                  
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group" id="pekerjaanLainnyaId" style="display: none;">
@@ -459,13 +463,14 @@
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.animateNumber.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/scrollax.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>  
   <script>
     let speech = null;
     let baseUrl = "<?php echo base_url(); ?>";
     let tipe = "<?php echo $tipe; ?>";
     let voices = speechSynthesis.getVoices();
     let number = null;
+    let isPlaying = true;
 
     function playTextToSpeech(x) {
       if (speech && speech !== x.innerHTML.toString() && speechSynthesis.speaking) {
@@ -474,7 +479,7 @@
 
       speech = x.innerHTML.toString();
       speechText = speech;
-      if (!speechSynthesis.speaking) {
+      if (!speechSynthesis.speaking && !isPlaying) {
         let speechVoice = new SpeechSynthesisUtterance();
         speechVoice.voice = voices[182];
         speechVoice.text = speechText;
@@ -534,21 +539,42 @@
       };
 
       $(document).ready(function() {
-        if (!speechSynthesis.speaking) {
-          let speechVoice = new SpeechSynthesisUtterance();
-          speechVoice.voice = voices[182];
-          speechVoice.text = "selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar";
-          speechVoice.lang = "id-ID";
-          speechSynthesis.speak(speechVoice);
-        }
+        // if (!speechSynthesis.speaking) {
+        //   let speechVoice = new SpeechSynthesisUtterance();
+        //   speechVoice.voice = voices[182];
+        //   speechVoice.text = "selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar";
+        //   speechVoice.lang = "id-ID";
+        //   speechSynthesis.speak(speechVoice);
+        // }
+        navigator.mediaDevices.getUserMedia({
+          audio: true
+        }).then(function(stream) {
+
+          var x = document.getElementById("myAudio");
+          x.play();
+
+          stream.getTracks().forEach(function(track) {
+            track.stop();
+            isPlaying = false;
+          });
+        });
+
+        $("#myAudio").on({
+          play: function() { // the audio is playing!
+            isPlaying = true;
+          },
+          pause: function() { // the audio is paused!
+            isPlaying = false;
+          },
+        })
       });
     } else {
       alert("Your Browser does not support Speech Recognition, Please Use Google Chrome");
     }
 
-    function checkLainnya() {      
+    function checkLainnya() {
       $("#inputRecord1").val(null);
-      const value = document.querySelector('input[name="pekerjaan"]:checked').value;      
+      const value = document.querySelector('input[name="pekerjaan"]:checked').value;
       if (value == 'Lain - Lain') {
         $("#pekerjaanLainnyaId").css('display', 'inline');
       } else {
