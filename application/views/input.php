@@ -459,7 +459,7 @@
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.animateNumber.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/scrollax.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/responsivevoice.js"></script>
   <script>
     let speech = null;
@@ -468,10 +468,21 @@
     let voices = speechSynthesis.getVoices();
     let number = null;
 
-    $(document).ready(function() {
-      responsiveVoice.speak("selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) p t u n makassar", 'Indonesian Female', {
-              pitch: 1
-      });
+    $(document).ready(function() {      
+      if (!speechSynthesis.speaking) {
+        let speechVoice = new SpeechSynthesisUtterance();   
+        const voices = speechSynthesis.getVoices();  
+        speechVoice.voice = voices[184];
+        speechVoice.text = "selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar";
+        speechVoice.lang = "id-ID";
+        speechSynthesis.speak(speechVoice);
+      }
+
+      if (!speechSynthesis.speaking) {
+        responsiveVoice.speak("selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) p t u n makassar", 'Indonesian Female', {
+          pitch: 1
+        });
+      }
     });
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
