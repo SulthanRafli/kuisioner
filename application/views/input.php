@@ -463,8 +463,8 @@
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.animateNumber.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/scrollax.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/main.js"></script>
+  <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/responsiveaudio.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-  <script src="https://code.responsivevoice.org/responsivevoice.js?key=37dAPHdr"></script>
   <script>
     let baseUrl = "<?php echo base_url(); ?>";
     let tipe = "<?php echo $tipe; ?>";
