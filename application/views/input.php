@@ -463,29 +463,21 @@
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/jquery.animateNumber.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/scrollax.min.js"></script>
   <script src="<?php echo base_url(); ?>/assetsh/bootstrap4/js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=37dAPHdr"></script>
   <script>
-    let speech = null;
     let baseUrl = "<?php echo base_url(); ?>";
     let tipe = "<?php echo $tipe; ?>";
-    let voices = speechSynthesis.getVoices();
     let number = null;
-    let isPlaying = true;
+
+    $(document).ready(function() {
+      responsiveVoice.speak("selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar", 'Indonesian Female');
+    });
 
     function playTextToSpeech(x) {
-      if (speech && speech !== x.innerHTML.toString() && speechSynthesis.speaking) {
-        speechSynthesis.cancel();
-      }
-
       speech = x.innerHTML.toString();
       speechText = speech;
-      if (!speechSynthesis.speaking && !isPlaying) {
-        let speechVoice = new SpeechSynthesisUtterance();
-        speechVoice.voice = voices[182];
-        speechVoice.text = speechText;
-        speechVoice.lang = "id-ID";
-        speechSynthesis.speak(speechVoice);
-      }
+      responsiveVoice.speak(speechText, 'Indonesian Female');
     }
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -537,37 +529,6 @@
         });
 
       };
-
-      $(document).ready(function() {
-        // if (!speechSynthesis.speaking) {
-        //   let speechVoice = new SpeechSynthesisUtterance();
-        //   speechVoice.voice = voices[182];
-        //   speechVoice.text = "selamat datang di survei elektronik teknologi audio ramah disabilitas (setara) ptun makassar";
-        //   speechVoice.lang = "id-ID";
-        //   speechSynthesis.speak(speechVoice);
-        // }
-        navigator.mediaDevices.getUserMedia({
-          audio: true
-        }).then(function(stream) {
-
-          var x = document.getElementById("myAudio");
-          x.play();
-
-          stream.getTracks().forEach(function(track) {
-            track.stop();
-            isPlaying = false;
-          });
-        });
-
-        $("#myAudio").on({
-          play: function() { // the audio is playing!
-            isPlaying = true;
-          },
-          pause: function() { // the audio is paused!
-            isPlaying = false;
-          },
-        })
-      });
     } else {
       alert("Your Browser does not support Speech Recognition, Please Use Google Chrome");
     }
