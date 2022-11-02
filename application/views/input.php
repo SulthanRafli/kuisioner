@@ -67,38 +67,38 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-header">
-                <h4><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Profil Responden</span></h4>
+                <h4><span style="cursor: pointer">Profil Responden</span></h4>
               </div>
               <div class="card-body">
                 <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Jenis Kelamin</span></label>
+                  <label><span style="cursor: pointer">Jenis Kelamin</span></label>
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="jenisKelamin" id="lakiLakiId" value="Laki - Laki" required="required">
                     <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="lakiLakiId">
-                      <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Laki - Laki</span>
+                      <span style="cursor: pointer">Laki - Laki</span>
                     </label>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="jenisKelamin" id="perempuanId" value="Perempuan" required="required">
                     <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="perempuanId">
-                      <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Perempuan</span>
+                      <span style="cursor: pointer">Perempuan</span>
                     </label>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pendidikan Terakhir</span></label>
+                  <label><span style="cursor: pointer">Pendidikan Terakhir</span></label>
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pendidikan" id="sdId" value="SD" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="sdId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">SD</span>
+                          <span style="cursor: pointer">SD</span>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pendidikan" id="smpId" value="SMP" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="smpId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">SMP</span>
+                          <span style="cursor: pointer">SMP</span>
                         </label>
                       </div>
                     </div>
@@ -106,13 +106,13 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pendidikan" id="smaId" value="SMA" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="smaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">SMA</span>
+                          <span style="cursor: pointer">SMA</span>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pendidikan" id="diplomaId" value="S1" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="diplomaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">S1</span>
+                          <span style="cursor: pointer">S1</span>
                         </label>
                       </div>
                     </div>
@@ -120,13 +120,13 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pendidikan" id="s1Id" value="S2" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="s1Id">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">S2</span>
+                          <span style="cursor: pointer">S2</span>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pendidikan" id="s2Id" value="S3" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="s2Id">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">S3</span>
+                          <span style="cursor: pointer">S3</span>
                         </label>
                       </div>
                     </div>
@@ -134,13 +134,13 @@
                 </div>
 
                 <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Usia</span></label>
+                  <label><span style="cursor: pointer">Usia</span></label>
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="usia" id="21Id" value="< 21 Tahun" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="21Id">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">
+                          <span style="cursor: pointer">
                             < 21 Tahun</span>
                         </label>
                       </div>
@@ -149,7 +149,7 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="usia" id="2150Id" value="21 - 50 Tahun" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="2150Id">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">21 - 50 Tahun</span>
+                          <span style="cursor: pointer">21 - 50 Tahun</span>
                         </label>
                       </div>
                     </div>
@@ -157,26 +157,26 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="usia" id="50Id" value="> 50 Tahun" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="50Id">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">> 50 Tahun</span>
+                          <span style="cursor: pointer">> 50 Tahun</span>
                         </label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Jenis Layanan Yang Diterima</span></label>
+                  <label><span style="cursor: pointer">Jenis Layanan Yang Diterima</span></label>
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="jenisLayanan" id="administrasiId" value="Administrasi Persidangan" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="administrasiId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Administrasi Persidangan</span>
+                          <span style="cursor: pointer">Administrasi Persidangan</span>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="jenisLayanan" id="informasiId" value="Permohanan Informmasi" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="informasiId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Permohonan Informasi</span>
+                          <span style="cursor: pointer">Permohonan Informasi</span>
                         </label>
                       </div>
                     </div>
@@ -184,13 +184,13 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="jenisLayanan" id="pengaduanId" value="Permohonan Pengaduan" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="pengaduanId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Permohonan Pengaduan</span>
+                          <span style="cursor: pointer">Permohonan Pengaduan</span>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="jenisLayanan" id="posbakumId" value="Layanan Posbakum" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="posbakumId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Layanan Posbakum</span>
+                          <span style="cursor: pointer">Layanan Posbakum</span>
                         </label>
                       </div>
                     </div>
@@ -198,32 +198,32 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="jenisLayanan" id="prodeoId" value="Layanan Prodeo" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="prodeoId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Layanan Prodeo</span>
+                          <span style="cursor: pointer">Layanan Prodeo</span>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="jenisLayanan" id="persuratanId" value="Layanan Persuratan" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="persuratanId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Layanan Persuratan</span>
+                          <span style="cursor: pointer">Layanan Persuratan</span>
                         </label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pekerjaan</span></label>
+                  <label><span style="cursor: pointer">Pekerjaan</span></label>
                   <div class="row">
                     <div class="col-lg-3">
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="pnsId" value="PNS" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="pnsId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">PNS</span>
+                          <span style="cursor: pointer">PNS</span>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="tniId" value="TNI" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="tniId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">TNI</span>
+                          <span style="cursor: pointer">TNI</span>
                         </label>
                       </div>
                     </div>
@@ -231,13 +231,13 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="pegawaiSwastaId" value="Swasta" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="pegawaiSwastaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Swasta</span>
+                          <span style="cursor: pointer">Swasta</span>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="wiraswastaId" value="Wirausaha" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="wiraswastaId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Wirausaha</span>
+                          <span style="cursor: pointer">Wirausaha</span>
                         </label>
                       </div>
                     </div>
@@ -245,20 +245,20 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="advokatId" value="POLRI" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="advokatId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">POLRI</span>
+                          <span style="cursor: pointer">POLRI</span>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="pekerjaan" onchange="checkLainnya()" id="lainLainId" value="Lain - Lain" required="required">
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="lainLainId">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Lain - Lain</span>
+                          <span style="cursor: pointer">Lain - Lain</span>
                         </label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="form-group" id="pekerjaanLainnyaId" style="display: none;">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pekerjaan Lainnya</span></label>
+                  <label><span style="cursor: pointer">Pekerjaan Lainnya</span></label>
                   <div class="row">
                     <div class="col-lg-8">
                       <div class="input-group">
@@ -274,7 +274,7 @@
                       </div>
                     </div>
                     <div class="col-lg-4" style="padding: 10px 10px 10px 18px">
-                      <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)" id="textRecord1" onclick="speechToText(1)"> Klik untuk rekam </span>
+                      <span style="cursor: pointer" id="textRecord1" onclick="speechToText(1)"> Klik untuk rekam </span>
                     </div>
                   </div>
                 </div>
@@ -293,7 +293,7 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-header">
-                <h4><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Pertanyaan</span></h4>
+                <h4><span style="cursor: pointer">Pertanyaan</span></h4>
               </div>
               <div class="card-body">
                 <?php foreach ($fetch_data as $row) {
@@ -334,32 +334,32 @@
                 ?>
                   <fieldset>
                     <div class="form-group">
-                      <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $row->pertanyaan; ?></span> ?</label>
+                      <label><span style="cursor: pointer"><?php echo $row->pertanyaan; ?></span> ?</label>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi1; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p1" ?>" required>
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p1" ?>">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $isi1; ?></span>
+                          <span style="cursor: pointer"><?php echo $isi1; ?></span>
                           <?php echo $starIsi1 ?>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi2; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p2" ?>" required>
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p2" ?>">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"><?php echo $isi2; ?></span>
+                          <span style="cursor: pointer"><?php echo $isi2; ?></span>
                           <?php echo $starIsi2 ?>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi3; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p3" ?>" required>
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p3" ?>">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"> <?php echo $isi3; ?></span>
+                          <span style="cursor: pointer"> <?php echo $isi3; ?></span>
                           <?php echo $starIsi3 ?>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" value="<?php echo $row->id . "$" . $row->isi4; ?>" name="p<?php echo $row->id ?>" id="p<?php echo $row->id . "p4" ?>" required>
                         <label class="form-check-label" style="font-weight: 100; font-size: 14px" for="p<?php echo $row->id . "p4" ?>">
-                          <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)"> <?php echo $isi4; ?></span>
+                          <span style="cursor: pointer"> <?php echo $isi4; ?></span>
                           <?php echo $starIsi4 ?>
                         </label>
                       </div>
@@ -367,7 +367,7 @@
                   </fieldset>
                 <?php } ?>
                 <div class="form-group">
-                  <label><span style="cursor: pointer" onmouseenter="playTextToSpeech(this)">Saran dan Masukan</span></label>
+                  <label><span style="cursor: pointer">Saran dan Masukan</span></label>
                   <div class="row">
                     <div class="col-lg-8">
                       <div class="input-group">
@@ -383,7 +383,7 @@
                       </div>
                     </div>
                     <div class="col-lg-4" style="padding: 10px 10px 10px 18px">
-                      <span style="cursor: pointer" onmouseenter="playTextToSpeech(this)" id="textRecord3" onclick="speechToText(3)"> Klik untuk rekam </span>
+                      <span style="cursor: pointer" id="textRecord3" onclick="speechToText(3)"> Klik untuk rekam </span>
                     </div>
                   </div>
                 </div>
