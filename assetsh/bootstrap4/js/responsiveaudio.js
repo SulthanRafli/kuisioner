@@ -5149,7 +5149,7 @@ if (isPrerendered() && !prerenderUsed) {
 				console.log("Launching search message");
 				responsiveVoice.speak(
 					"According to Voicebrite, " + txt,
-					"Indonesian Male"
+					"Indonesian Female"
 				);
 			}
 		}
@@ -5199,7 +5199,7 @@ window.addEventListener("load", function () {
 			function () {
 				if (config.speakLinks) {
 					//responsiveVoice.cancel();
-					responsiveVoice.speak(el.textContent, "Indonesian Male");
+					responsiveVoice.speak(el.textContent, "Indonesian Female");
 					trackEvent("agentFeature", "spokenLink");
 				}
 			},
@@ -5249,7 +5249,7 @@ window.addEventListener("load", function () {
 			last_selectedText = selectedText;
 
 			responsiveVoice.cancel(); // stop anything currently being spoken
-			responsiveVoice.speak(selectedText, "Indonesian Male"); //speak the text as returned by getSelectionText
+			responsiveVoice.speak(selectedText, "Indonesian Female"); //speak the text as returned by getSelectionText
 			trackEvent("agentFeature", "highlightText");
 		}
 	}
@@ -5271,7 +5271,7 @@ window.addEventListener("load", function () {
 				console.log("Launching welcome message");
 				responsiveVoice.speak(
 					GetRandomMsg(config.text_welcomeMessage),
-					"Indonesian Male"
+					"Indonesian Female"
 				);
 				trackEvent("agentFeature", "welcomeMessage");
 			}
@@ -5298,7 +5298,7 @@ window.addEventListener("load", function () {
 				welcomeMessage2Launched = true;
 				responsiveVoice.speak(
 					GetRandomMsg(config.text_welcomeMessage2),
-					"Indonesian Male"
+					"Indonesian Female"
 				);
 				trackEvent("agentFeature", "welcomeMessage2");
 				clearInterval(welcomeMessage2Interval);
@@ -5319,7 +5319,7 @@ window.addEventListener("load", function () {
 
 			responsiveVoice.speak(
 				GetRandomMsg(config.text_speakEndPage),
-				"Indonesian Male"
+				"Indonesian Female"
 			);
 			trackEvent("agentFeature", "scrollEnd");
 		}
@@ -5349,7 +5349,7 @@ window.addEventListener("load", function () {
 		if (idleTime >= 30000) {
 			responsiveVoice.speak(
 				GetRandomMsg(config.text_speakInactivity),
-				"Indonesian Male"
+				"Indonesian Female"
 			);
 			trackEvent("agentFeature", "inactivity");
 			idleTime = 0;
@@ -5366,7 +5366,7 @@ window.addEventListener("load", function () {
 		if (e.clientY < 0) {
 			responsiveVoice.speak(
 				GetRandomMsg(config.text_exitIntent),
-				"Indonesian Male"
+				"Indonesian Female"
 			);
 			trackEvent("agentFeature", "exitIntent");
 		}
@@ -5388,7 +5388,7 @@ window.addEventListener("load", function () {
 						if (code == "9") {
 							responsiveVoice.speak(
 								"Link 2 " + e.target.text,
-								"Indonesian Male"
+								"Indonesian Female"
 							);
 							trackEvent("agentFeature", "accesibilityNavigation", "tab");
 						}
@@ -5399,7 +5399,7 @@ window.addEventListener("load", function () {
 							setTimeout(
 								responsiveVoice.speak(
 									e.target.textContent + " button",
-									"Indonesian Male"
+									"Indonesian Female"
 								),
 								1000
 							);
@@ -5414,7 +5414,7 @@ window.addEventListener("load", function () {
 									document
 										.querySelectorAll(":focus")[0]
 										.getAttribute("placeholder"),
-								"Indonesian Male"
+								"Indonesian Female"
 							);
 							trackEvent("agentFeature", "accesibilityNavigation", "tab");
 						}
@@ -5435,7 +5435,7 @@ window.addEventListener("load", function () {
 
 				responsiveVoice.speak(
 					document.querySelectorAll("p")[started].textContent,
-					"Indonesian Male"
+					"Indonesian Female"
 				);
 				trackEvent("agentFeature", "accesibilityNavigation", "ctrl-arrow");
 				document.querySelectorAll("p")[started].scrollIntoView(false);
@@ -5446,7 +5446,7 @@ window.addEventListener("load", function () {
 
 				responsiveVoice.speak(
 					document.querySelectorAll("p")[started].textContent,
-					"Indonesian Male"
+					"Indonesian Female"
 				);
 				trackEvent("agentFeature", "accesibilityNavigation", "ctrl-arrow");
 				document.querySelectorAll("p")[started].scrollIntoView(false);
